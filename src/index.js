@@ -10,10 +10,6 @@ app.use(express.json());
 // Put your implementation here
 // If necessary to add imports, please do so in the section above
 const users = [];
-// for testing
-app.resetUsers = () => {
-    users = [];
-};
 app.post('/users', (req, res) => {
     const {name, email} = req.body;
     if (!name || !email){
